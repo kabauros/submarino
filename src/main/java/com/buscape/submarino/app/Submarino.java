@@ -122,9 +122,14 @@ public class Submarino implements CommandLineRunner {
 					z = z - 1;
 
 					break;
+					
 				case "U":
+					if(z > 0){
+						throw new RuntimeException("Submarino deve permanecer abaixo da linha da água!");
+					}
 					z = z + 1;
 					break;
+					
 				default:
 					break;
 				}
